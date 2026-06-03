@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>你站在哪一边？· 女性主义价值自测 | Where Do You Stand?</title>
+<meta name="description" content="一份严谨、好玩、有深度的女性主义价值自测：20 道题，照出你最接近哪一个女性主义流派，并为你画一个专属形象。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=Archivo:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#FBFAF7;--paper-2:#F4F2EC;--paper-3:#EBE8E0;--surface:#FFFFFF;
+  --ink:#1E1C19;--ink-soft:#56514A;--ink-faint:#8C887E;
+  --line:#E8E4DC;--line-soft:#F1EEE7;
+  --crimson:#9A1B30;--crimson-deep:#6C1020;--ochre:#AE7C24;--ochre-soft:#C79A4A;
+  --plum:#5C2A47;--teal:#1E544F;--indigo:#2A3A6B;--forest:#3C5230;
+  --serif-cjk:"Noto Serif SC",serif;
+  --sans:"Manrope","Noto Sans SC",-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  --sans-cjk:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --display:"Fraunces","Noto Serif SC",Georgia,serif;--label:"Archivo","Noto Sans SC",sans-serif;
+  --grad:linear-gradient(120deg,var(--crimson),var(--ochre));
+  --ease:cubic-bezier(.22,.68,.16,1);--bounce:cubic-bezier(.34,1.56,.64,1);
+  --shadow-sm:0 1px 2px rgba(30,28,25,.04),0 4px 12px rgba(30,28,25,.05);
+  --shadow-md:0 4px 12px rgba(30,28,25,.06),0 18px 38px -18px rgba(30,28,25,.18);
+  --shadow-lg:0 10px 26px rgba(30,28,25,.08),0 40px 72px -28px rgba(30,28,25,.28);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:clamp(1rem,.6rem + .6vw,1.1rem);line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;min-height:100vh}
+.cjk{font-family:var(--sans-cjk)}
+body::before{content:"";position:fixed;inset:-15%;z-index:-1;pointer-events:none;filter:blur(22px);
+  background:radial-gradient(38% 38% at 16% 20%,rgba(154,27,48,.11),transparent 70%),radial-gradient(42% 42% at 86% 16%,rgba(174,124,36,.13),transparent 70%),radial-gradient(48% 48% at 72% 90%,rgba(92,42,71,.09),transparent 70%),radial-gradient(40% 40% at 8% 84%,rgba(30,84,79,.07),transparent 70%);
+  animation:mesh 26s ease-in-out infinite alternate}
+@keyframes mesh{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(2%,-2%,0) scale(1.06)}100%{transform:translate3d(-2%,2%,0) scale(1.03)}}
+
+.progress{position:fixed;top:0;left:0;height:3px;width:0%;z-index:200;background:var(--grad);box-shadow:0 0 12px rgba(174,124,36,.55);transition:width .5s var(--ease)}
+.shell{max-width:44rem;margin:0 auto;padding:clamp(1.2rem,4vw,2.4rem) clamp(1rem,4vw,1.6rem) 4rem;position:relative;z-index:1}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes popIn{0%{opacity:0;transform:scale(.7)}100%{opacity:1;transform:scale(1)}}
+@keyframes optIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes cardIn{from{opacity:0;transform:translateY(24px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* ---------- intro ---------- */
+.intro{text-align:center;padding:clamp(1rem,5vh,3rem) 0 1rem;animation:fadeUp .7s var(--ease) both}
+.kicker{font-family:var(--label);font-weight:700;font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--crimson);display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.2rem}
+.kicker::before,.kicker::after{content:"";width:24px;height:1px;background:linear-gradient(90deg,transparent,var(--ochre-soft))}
+.intro h1{font-family:var(--display);font-weight:900;font-size:clamp(2.2rem,1.2rem + 4.4vw,3.7rem);line-height:1;letter-spacing:-.015em;background:linear-gradient(115deg,var(--ink) 38%,var(--crimson));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.intro h1 .en{display:block;font-style:italic;font-weight:400;font-size:clamp(1rem,.8rem + 1vw,1.45rem);margin-top:.5rem;-webkit-text-fill-color:var(--ink-faint);color:var(--ink-faint)}
+.intro .lede{font-size:1.05rem;line-height:1.75;color:var(--ink-soft);max-width:33rem;margin:1.4rem auto 0;animation:fadeUp .7s .1s var(--ease) both}
+.intro .lede b{color:var(--ink);font-weight:700}
+.char-arc{display:flex;justify-content:center;gap:.55rem;margin:2.4rem auto 0;flex-wrap:wrap;max-width:34rem}
+.char-arc .cs{width:60px;height:64px;border-radius:15px;overflow:hidden;box-shadow:var(--shadow-sm);border:2px solid #fff;background:#fff;animation:popIn .5s var(--bounce) both}
+.char-arc .cs svg{width:100%;height:100%;display:block}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem 1.3rem;justify-content:center;margin-top:1.8rem;font-family:var(--label);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+.meta span{display:inline-flex;align-items:center;gap:.5rem}
+.meta span::before{content:"";width:5px;height:5px;background:var(--ochre);border-radius:50%}
+.start-btn{margin-top:2.2rem;font-family:var(--label);font-weight:700;font-size:.82rem;letter-spacing:.1em;color:#fff;background:var(--grad);background-size:160% 100%;border:none;border-radius:100px;padding:1.05rem 2.6rem;cursor:pointer;box-shadow:0 10px 24px -8px rgba(154,27,48,.6);transition:transform .25s var(--bounce),box-shadow .25s,background-position .5s;animation:fadeUp .7s .2s var(--ease) both}
+.start-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 16px 32px -8px rgba(154,27,48,.6);background-position:100% 0}
+.start-btn:active{transform:translateY(-1px) scale(.99)}
+.intro .tiny{margin:1.5rem auto 0;font-size:.78rem;color:var(--ink-faint);max-width:30rem}
+
+/* ---------- quiz card ---------- */
+.qcard{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow-md);overflow:hidden;animation:cardIn .5s var(--ease) both}
+.qhead{padding:1.1rem clamp(1.2rem,4vw,1.9rem) 0;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.qnum{font-family:var(--display);font-weight:600;color:var(--ink-faint);font-size:.92rem}
+.qnum b{font-family:var(--display);font-weight:900;font-size:1.55rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-right:.1rem}
+.q-skip{font-family:var(--label);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);background:none;border:none;cursor:pointer;padding:.3rem;transition:color .2s}
+.q-skip:hover{color:var(--crimson)}
+.qbar{height:6px;background:var(--paper-3);border-radius:100px;margin:.85rem clamp(1.2rem,4vw,1.9rem) 0;overflow:hidden}
+.qbar i{display:block;height:100%;width:0;border-radius:100px;background:linear-gradient(90deg,var(--crimson),var(--ochre),var(--crimson));background-size:200% 100%;transition:width .5s var(--ease);animation:shimmer 2.4s linear infinite}
+.quiz-body{padding:clamp(1.3rem,4vw,1.9rem)}
+.q-text{font-family:var(--sans-cjk);font-weight:700;font-size:clamp(1.18rem,1rem + .7vw,1.42rem);line-height:1.5;color:var(--ink);margin-bottom:1.3rem;letter-spacing:-.01em}
+.q-text b{color:var(--crimson)}
+.q-opts{display:flex;flex-direction:column;gap:.7rem}
+.q-opt{text-align:left;font-family:var(--sans-cjk);font-size:1rem;line-height:1.45;color:var(--ink-soft);background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:.95rem 1.1rem;cursor:pointer;transition:border-color .2s,background .2s,transform .2s,box-shadow .2s,color .2s;display:flex;align-items:center;gap:.85rem;animation:optIn .45s var(--ease) both}
+.q-opt .dot{flex:0 0 auto;width:20px;height:20px;border-radius:50%;border:2px solid var(--line);transition:border-color .2s,background .2s;position:relative}
+.q-opt .dot::after{content:"";position:absolute;inset:0;margin:auto;width:7px;height:7px;border-radius:50%;background:#fff;transform:scale(0);transition:transform .25s var(--bounce)}
+.q-opt .otext{flex:1}
+.q-opt b{color:var(--ink);font-weight:700}
+.q-opt:hover{border-color:var(--crimson);transform:translateX(4px);box-shadow:var(--shadow-sm);color:var(--ink)}
+.q-opt:hover .dot{border-color:var(--crimson)}
+.q-opt.sel{border-color:var(--crimson);background:linear-gradient(90deg,rgba(154,27,48,.07),rgba(174,124,36,.05));color:var(--ink);transform:translateX(4px) scale(1.004);box-shadow:0 8px 20px -8px rgba(154,27,48,.45)}
+.q-opt.sel .dot{border-color:var(--crimson);background:var(--crimson)}
+.q-opt.sel .dot::after{transform:scale(1)}
+.q-nav{margin-top:1.3rem;display:flex;justify-content:space-between;align-items:center}
+.q-back{font-family:var(--label);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);background:none;border:none;cursor:pointer;padding:.4rem .2rem;transition:color .2s}
+.q-back:hover{color:var(--ink)}
+.q-back[disabled]{opacity:.3;cursor:default}
+.q-hint{font-family:var(--label);font-size:.62rem;letter-spacing:.04em;color:var(--ink-faint)}
+
+/* ---------- result ---------- */
+.rcard{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow-lg);overflow:hidden;animation:cardIn .55s var(--ease) both}
+.r-hero{position:relative;padding:clamp(1.7rem,5vw,2.6rem) clamp(1.3rem,4vw,2rem) 1.7rem;text-align:center;overflow:hidden}
+.r-hero::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(75% 95% at 50% -12%,var(--halo,rgba(154,27,48,.14)),transparent 72%)}
+.r-eyebrow{position:relative;z-index:1;font-family:var(--label);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--crimson);margin-bottom:1.1rem;animation:fadeUp .5s .05s both}
+.r-portrait{position:relative;z-index:1;width:150px;height:160px;margin:0 auto;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-md);border:3px solid #fff;animation:popIn .6s .12s var(--bounce) both}
+.r-portrait svg{width:100%;height:100%;display:block}
+.r-float{animation:floaty 5s ease-in-out infinite;animation-delay:.8s}
+.r-name{position:relative;z-index:1;font-family:var(--display);font-weight:900;font-size:clamp(1.7rem,1.2rem + 2vw,2.4rem);line-height:1.05;color:var(--ink);margin-top:1.1rem;animation:fadeUp .5s .25s both}
+.r-name .r-en{display:block;font-family:var(--display);font-style:italic;font-weight:400;font-size:.98rem;color:var(--ink-faint);margin-top:.35rem}
+.r-tag{position:relative;z-index:1;display:inline-block;margin-top:.85rem;font-family:var(--label);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;padding:.36rem .85rem;border-radius:100px;animation:popIn .5s .38s var(--bounce) both}
+.r-body{padding:0 clamp(1.3rem,4vw,2rem) clamp(1.6rem,4vw,2rem)}
+.r-body>*{animation:fadeUp .5s var(--ease) both}
+.r-lead{font-size:1.04rem;line-height:1.74;color:var(--ink-soft);margin:.4rem 0 0}
+.r-lead b{color:var(--ink);font-weight:700}
+.r-second{font-size:.96rem;line-height:1.68;color:var(--ink-soft);background:var(--paper-2);border-left:3px solid var(--ochre);padding:.85rem 1.05rem;border-radius:0 10px 10px 0;margin:1.1rem 0 0}
+.r-second b{color:var(--ink);font-weight:700}
+.r-sec-title{font-family:var(--label);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin:1.8rem 0 .8rem;display:flex;align-items:center;gap:.7rem}
+.r-sec-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.r-bars{display:flex;flex-direction:column;gap:.7rem}
+.r-row{display:grid;grid-template-columns:7.5rem 1fr 2.8rem;gap:.8rem;align-items:center;font-family:var(--label);font-size:.74rem;letter-spacing:.02em;color:var(--ink-soft)}
+.r-row .r-track{background:var(--paper-3);border-radius:100px;height:14px;overflow:hidden;min-width:0}
+.r-row .r-fill{display:block;height:100%;width:0;border-radius:100px;transition:width 1s var(--ease)}
+.r-row.top{color:var(--ink);font-weight:800}
+.r-row .r-pct{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.compass{display:flex;justify-content:center}
+.compass svg{width:100%;max-width:320px;height:auto;background:linear-gradient(160deg,#fff,var(--paper-2));border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-sm)}
+.r-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.r-cell{background:var(--paper-2);padding:1rem 1.15rem;border-radius:14px;border:1px solid var(--line-soft)}
+.r-cell h6{font-family:var(--label);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre);margin:0 0 .45rem;font-weight:700}
+.r-cell p{font-size:.92rem;line-height:1.55;color:var(--ink-soft);margin:0}
+.r-quote{font-family:var(--display);font-style:italic;font-size:1.1rem;line-height:1.5;color:var(--ink);padding:.4rem 0 .4rem 1.4rem;margin:1.6rem 0;border-left:3px solid;border-image:var(--grad) 1}
+.r-quote cite{display:block;font-style:normal;font-family:var(--label);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:.55rem}
+.r-caveat{font-size:.84rem;line-height:1.6;color:var(--ink-faint);margin-top:1.2rem}
+.q-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem;align-items:center}
+.q-btn{font-family:var(--label);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:.85rem 1.4rem;border-radius:100px;cursor:pointer;border:none;background:var(--grad);background-size:160% 100%;color:#fff;box-shadow:0 8px 18px -8px rgba(154,27,48,.5);transition:transform .2s var(--bounce),box-shadow .2s,background-position .4s}
+.q-btn:hover{transform:translateY(-2px);box-shadow:0 14px 26px -8px rgba(154,27,48,.5);background-position:100% 0}
+.q-btn.ghost{background:none;color:var(--ink-soft);border:1.5px solid var(--line);box-shadow:none}
+.q-btn.ghost:hover{border-color:var(--ink);color:var(--ink);transform:translateY(-2px)}
+.copied{font-family:var(--label);font-size:.66rem;letter-spacing:.08em;color:var(--forest);font-weight:700}
+.share-out{margin-top:1.4rem;border-top:1px dashed var(--line);padding-top:1.4rem;animation:fadeUp .4s var(--ease) both}
+.share-out[hidden]{display:none}
+.share-wait{font-family:var(--sans-cjk);font-size:.95rem;color:var(--ink-faint);text-align:center;padding:1rem 0}
+.share-card-img{display:block;width:100%;max-width:300px;margin:0 auto 1rem;border-radius:16px;box-shadow:var(--shadow-lg);border:1px solid var(--line)}
+.share-tip{font-size:.86rem;line-height:1.6;color:var(--ink-soft);text-align:center;margin-bottom:1rem;max-width:26rem;margin-left:auto;margin-right:auto}
+.share-tip b{color:var(--ink);font-weight:700}
+.q-btn[download]{text-decoration:none;display:inline-block}
+
+.site-foot{text-align:center;margin-top:2.2rem;font-family:var(--label);font-size:.62rem;letter-spacing:.06em;color:var(--ink-faint);line-height:1.8}
+.site-foot a{color:var(--crimson);text-decoration:none}
+
+@media (max-width:560px){
+  .r-row{grid-template-columns:5.5rem 1fr 2.4rem}
+  .r-grid{grid-template-columns:1fr}
+  .char-arc .cs{width:52px;height:56px}
+}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001s!important;transition-duration:.001s!important}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<main class="shell">
+  <div id="app"><!-- intro / quiz / result mounts here --></div>
+  <div class="site-foot">
+    女性主义价值自测 · A FEMINIST VALUES SELF-TEST<br>
+    一面镜子，不是判决 · 不存储、不上传任何答案
+  </div>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var app=document.getElementById('app');
+  var progress=document.getElementById('progress');
+
+  /* ============================ 流派数据 ============================ */
+  var F={
+    liberal:{s:'自由主义',card:'自由主义 / 选择派',en:'Liberal / Choice Feminism',
+      lead:'你把个体的<b>权利与选择</b>放在最前面，相信平等可以在现有制度里一步步争取到。你尊重每个女性"我自己决定"的声音，对宏大的结构改造保持谨慎。',
+      rep:'沃斯通克拉夫特、约翰·斯图亚特·密尔、贝蒂·弗里丹、格洛丽亚·斯泰纳姆',
+      clash:'激进派与马克思派——他们会说你"只帮精英女性挤进旧体系，却不掀翻体系本身"。',
+      q:'「我不为我的性别求恩赐，只请你们把脚从我们脖子上挪开。」',qa:'萨拉·格里姆克'},
+    radical:{s:'激进',card:'激进女性主义',en:'Radical Feminism',
+      lead:'你认为<b>父权制本身</b>才是最根本的压迫系统，温和的改良不够，必须从根上质疑并改造整套性别秩序。你警惕一切"自愿"背后的结构塑造。',
+      rep:'凯特·米利特、安德里亚·德沃金、凯瑟琳·麦金农',
+      clash:'自由主义与流行派——你会觉得她们把解放稀释成了个人风格与消费。',
+      q:'「在父权的注视下，女人往往成了自己最严苛的看守。」',qa:'桑德拉·巴特基'},
+    marxist:{s:'社会主义',card:'社会主义 / 马克思主义',en:'Socialist / Marxist Feminism',
+      lead:'你坚信性别压迫与<b>阶级剥削</b>不可分割：不触动资本与经济结构，性别平等就只是少数人的平等。你拒绝在"为了女性"和"为了穷人"之间二选一。',
+      rep:'克拉拉·蔡特金、海蒂·哈特曼、西尔维娅·费代里奇',
+      clash:'自由主义派——你会说"让一个女人当上 CEO"对流水线上的女工毫无意义。',
+      q:'「家务劳动从未被付酬，却撑起了整个经济。」',qa:'西尔维娅·费代里奇'},
+    intersectional:{s:'交叉性',card:'交叉性 / 后殖民',en:'Intersectional / Postcolonial Feminism',
+      lead:'你拒绝抽象的"普遍女人"：<b>种族、阶级、文化、殖民史</b>交织在一起，决定了不同女性截然不同的处境。你对"以单一标准评判他人"格外警惕。',
+      rep:'金伯莱·克伦肖、奥德雷·洛德、钱德拉·莫汉蒂',
+      clash:'强调"统一姐妹情谊"的立场——你会指出那个"普遍女人"往往悄悄是个特权女人。',
+      q:'「用主人的工具，永远拆不掉主人的房子。」',qa:'奥德雷·洛德'},
+    postmodern:{s:'后现代',card:'后现代 / 酷儿 / 跨性别',en:'Postmodern / Queer / Trans Feminism',
+      lead:'你认为性别是被<b>建构与操演</b>出来的，而非生理决定的命运。你质疑"男/女"二元，主张以自我认同来理解性别，反对一切生理本质主义。',
+      rep:'朱迪斯·巴特勒、伊芙·赛吉维克、朱莉娅·塞拉诺',
+      clash:'以生理界定"女性"的性别批判立场——这是当代最尖锐的裂痕之一。',
+      q:'「性别是你不断在做的事，而非你天生所是。」',qa:'朱迪斯·巴特勒'},
+    cultural:{s:'关怀 / 差异',card:'关怀 / 差异女性主义',en:'Cultural / Care Feminism',
+      lead:'你认为不该把男性当作默认标准。那些被贬低为"女性化"的特质——<b>关怀、关系、连结</b>——本身有价值，应被尊重而非被抹平。',
+      rep:'卡罗尔·吉利根、内尔·诺丁斯、萨拉·拉迪克',
+      clash:'主张"一视同仁"的平等派——他们担心强调差异会把女性重新关回笼子。',
+      q:'「一旦把男性当作人类的标准，女性就永远是那个偏离。」',qa:'卡罗尔·吉利根'},
+    faith:{s:'信仰 / 协商',card:'信仰 / 文化协商',en:'Faith-based / Relativist Feminism',
+      lead:'你相信信仰与文化里有女性<b>自己的能动空间</b>，平等可以从传统内部争取；你反对用单一的世俗自由尺度，去判定别人"其实并不自由"。',
+      rep:'阿米娜·瓦杜德、莱拉·阿赫迈德、（呼应）莫汉蒂',
+      clash:'世俗与激进派——他们更倾向认为某些宗教/文化习俗本质上压迫女性。',
+      q:'「谁，才是她自己经验的最终权威？」',qa:'本测自反诘'},
+    eco:{s:'生态',card:'生态女性主义',en:'Ecofeminism',
+      lead:'你看到一条共同的逻辑：<b>父权对女性的支配，与人类对自然的征服同根同源</b>。你主张关怀、连结与可持续，反对一切"支配—被支配"的结构。',
+      rep:'范达娜·席娃、玛丽亚·米斯、格丽塔·加德',
+      clash:'更聚焦制度与法律的自由主义派——他们会觉得你把议题扩得太宽。',
+      q:'「同一种逻辑，既榨取女性，也榨取土地。」',qa:'范达娜·席娃'}
+  };
+  /* 流派主题色 */
+  var SC={liberal:'#9A1B30',radical:'#6C1020',marxist:'#2A3A6B',intersectional:'#5C2A47',postmodern:'#1E544F',cultural:'#AE7C24',faith:'#7C5230',eco:'#3C5230'};
+
+  /* ============================ 8 个卡通女性形象（SVG）============================
+     气质 / 穿着 / 肤色 依据流派的价值取向设计：
+     liberal 干练职业 · radical 锐利坚定 · marxist 劳动者 · intersectional 多元肤色与图案
+     postmodern 流动撞色 · cultural 温柔关怀 · faith 头巾·从容 · eco 自然花叶 */
+  var CHAR={
+    liberal:'<svg viewBox="0 0 140 150" role="img" aria-label="自由主义 · 干练知性"><defs><linearGradient id="lb_bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBEEF0"/><stop offset="1" stop-color="#F3DBE0"/></linearGradient><radialGradient id="lb_sk" cx="42%" cy="34%" r="78%"><stop offset="0" stop-color="#F8D7B6"/><stop offset="1" stop-color="#EBBF9A"/></radialGradient><linearGradient id="lb_hr" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#4d3729"/><stop offset="1" stop-color="#2d1f18"/></linearGradient><linearGradient id="lb_cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#AE2438"/><stop offset="1" stop-color="#7c1526"/></linearGradient></defs><rect x="3" y="3" width="134" height="144" rx="20" fill="url(#lb_bg)"/><path d="M15 150 Q17 112 50 102 L90 102 Q123 112 125 150 Z" fill="url(#lb_cl)"/><path d="M60 102 L70 126 L80 102 Q70 110 60 102 Z" fill="#fbf3f1"/><path d="M58 102 L70 127 L60 119 Z" fill="#8d1a2b"/><path d="M82 102 L70 127 L80 119 Z" fill="#8d1a2b"/><circle cx="92" cy="121" r="5.5" fill="#C79A4A"/><circle cx="92.5" cy="119.5" r="1.8" fill="#fff" opacity=".85"/><ellipse cx="45.5" cy="66" rx="5" ry="7" fill="url(#lb_sk)"/><ellipse cx="94.5" cy="66" rx="5" ry="7" fill="url(#lb_sk)"/><circle cx="45" cy="73" r="2" fill="#C79A4A"/><circle cx="95" cy="73" r="2" fill="#C79A4A"/><path d="M62 82 q8 7 16 0 l0 18 q-8 5 -16 0 Z" fill="url(#lb_sk)"/><path d="M62 84 q8 6 16 0 q-8 7 -16 0 Z" fill="#cf9b76" opacity=".45"/><path d="M41 66 Q39 30 70 28 Q101 30 99 66 L99 90 Q95 78 92 70 L48 70 Q45 78 41 90 Z" fill="url(#lb_hr)"/><ellipse cx="70" cy="62" rx="25.5" ry="28.5" fill="url(#lb_sk)"/><ellipse cx="60" cy="63.6" rx="4.6" ry="5.3" fill="#fff"/><ellipse cx="80" cy="63.6" rx="4.6" ry="5.3" fill="#fff"/><circle cx="60.6" cy="64.3" r="3.3" fill="#47362b"/><circle cx="80.6" cy="64.3" r="3.3" fill="#47362b"/><circle cx="60.6" cy="64.5" r="1.5" fill="#1d140f"/><circle cx="80.6" cy="64.5" r="1.5" fill="#1d140f"/><circle cx="59.2" cy="62.7" r="1.2" fill="#fff"/><circle cx="79.2" cy="62.7" r="1.2" fill="#fff"/><path d="M55.3 60.4 Q60 57.7 64.7 60.4" stroke="#34261e" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M75.3 60.4 Q80 57.7 84.7 60.4" stroke="#34261e" stroke-width="1.6" fill="none" stroke-linecap="round"/><g stroke="#3a2a22" stroke-width="1.5" fill="none" opacity=".92"><rect x="52.6" y="57.4" width="15.6" height="12.6" rx="6.3"/><rect x="71.8" y="57.4" width="15.6" height="12.6" rx="6.3"/><path d="M68.2 62.4 h3.6"/><path d="M52.6 61 l-6.4 1.2"/><path d="M87.4 61 l6.4 1.2"/></g><path d="M54.6 54.4 Q60 51.4 66 54" stroke="#34261e" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M74 54 Q80 51.4 85.4 54.4" stroke="#34261e" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M69.6 65 Q67.9 70.4 71 71.4" stroke="#d29b76" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M63.6 75 Q70 81 76.4 75 Q70 78.2 63.6 75 Z" fill="#bb5a48"/><path d="M64.6 75.4 Q70 78 75.4 75.4" stroke="#fff" stroke-width="1" fill="none" opacity=".5"/><ellipse cx="52.5" cy="71" rx="4.4" ry="2.7" fill="#f0a08e" opacity=".4"/><ellipse cx="87.5" cy="71" rx="4.4" ry="2.7" fill="#f0a08e" opacity=".4"/><path d="M41 66 Q39 30 70 28 Q101 30 99 66 Q97 48 84 44 Q89 53 87 60 Q80 47 64 46 Q50 47 47 61 Q44 51 41 66 Z" fill="url(#lb_hr)"/><path d="M45 52 Q56 42 71 42 Q60 46 52 54 Q47 58 45 52 Z" fill="#62493a" opacity=".55"/></svg>',
+    radical:'<svg viewBox="0 0 140 150" role="img" aria-label="激进 · 锐利酷飒"><defs><linearGradient id="rd_bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4E2E5"/><stop offset="1" stop-color="#EBCDD3"/></linearGradient><radialGradient id="rd_sk" cx="42%" cy="34%" r="78%"><stop offset="0" stop-color="#F9DABD"/><stop offset="1" stop-color="#EEC6A1"/></radialGradient><linearGradient id="rd_hr" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#3c211e"/><stop offset="1" stop-color="#24100e"/></linearGradient><linearGradient id="rd_cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d1424"/><stop offset="1" stop-color="#52000f"/></linearGradient></defs><rect x="3" y="3" width="134" height="144" rx="20" fill="url(#rd_bg)"/><path d="M15 150 Q17 110 52 101 L88 101 Q123 110 125 150 Z" fill="url(#rd_cl)"/><path d="M60 101 q10 9 20 0 l0 8 q-10 7 -20 0 Z" fill="#43000c"/><ellipse cx="45.5" cy="66" rx="5" ry="7" fill="url(#rd_sk)"/><ellipse cx="94.5" cy="66" rx="5" ry="7" fill="url(#rd_sk)"/><circle cx="45" cy="72" r="1.8" fill="#9A1B30"/><circle cx="45" cy="77" r="1.6" fill="#C79A4A"/><circle cx="95" cy="73" r="1.8" fill="#9A1B30"/><path d="M62 82 q8 7 16 0 l0 18 q-8 5 -16 0 Z" fill="url(#rd_sk)"/><path d="M46 60 Q43 30 70 30 Q98 30 96 62 Q92 44 80 41 Q92 46 92 60 L88 56 Q70 47 50 54 Q47 48 46 60 Z" fill="url(#rd_hr)"/><path d="M46 60 Q45 50 51 45 L54 60 Z" fill="#1c0c0b"/><path d="M50 47 Q56 41 64 41" stroke="#9A1B30" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".85"/><ellipse cx="70" cy="62" rx="25.5" ry="28.5" fill="url(#rd_sk)"/><ellipse cx="60" cy="63.6" rx="4.5" ry="5.2" fill="#fff"/><ellipse cx="80" cy="63.6" rx="4.5" ry="5.2" fill="#fff"/><circle cx="60.4" cy="64.3" r="3.2" fill="#2e1c18"/><circle cx="80.4" cy="64.3" r="3.2" fill="#2e1c18"/><circle cx="59.1" cy="62.8" r="1.1" fill="#fff"/><circle cx="79.1" cy="62.8" r="1.1" fill="#fff"/><path d="M55 60.2 Q60 57.6 65 60" stroke="#2a1512" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M75 60 Q80 57.6 85 60.2" stroke="#2a1512" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M53.5 53.4 L66 56.4" stroke="#2a1512" stroke-width="2.3" fill="none" stroke-linecap="round"/><path d="M86.5 53.4 L74 56.4" stroke="#2a1512" stroke-width="2.3" fill="none" stroke-linecap="round"/><path d="M69.6 65 Q68 70.2 71 71.4" stroke="#d59a74" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M62.5 76 Q70 78.6 78 75 Q72 80.5 64 79 Q62.6 77.6 62.5 76 Z" fill="#9A1B30"/><path d="M62.5 76 Q70 74.8 78 75" stroke="#6c1020" stroke-width="1" fill="none" opacity=".6"/><ellipse cx="52.5" cy="71" rx="4.2" ry="2.5" fill="#ec9a86" opacity=".38"/><ellipse cx="87.5" cy="71" rx="4.2" ry="2.5" fill="#ec9a86" opacity=".38"/><g transform="translate(91,116)"><circle r="9" fill="#9A1B30"/><circle r="9" fill="none" stroke="#fff" stroke-width="1" opacity=".5"/><rect x="-1.5" y="-1" width="3" height="6" rx="1" fill="#fff"/><rect x="-4" y="-1" width="8" height="2.4" rx="1.2" fill="#fff"/><rect x="-3.2" y="-4.6" width="2.2" height="4.2" rx="1" fill="#fff"/><rect x="-.3" y="-5.1" width="2.2" height="4.7" rx="1" fill="#fff"/><rect x="2.5" y="-4.2" width="2.2" height="4.3" rx="1" fill="#fff"/></g></svg>',
+    marxist:'<svg viewBox="0 0 140 150" role="img" aria-label="社会主义 · 劳动者飒爽"><defs><linearGradient id="mx_bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7EAF2"/><stop offset="1" stop-color="#D4D9E8"/></linearGradient><radialGradient id="mx_sk" cx="42%" cy="34%" r="80%"><stop offset="0" stop-color="#E8B780"/><stop offset="1" stop-color="#D69E5F"/></radialGradient><linearGradient id="mx_cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#32467f"/><stop offset="1" stop-color="#222f56"/></linearGradient><linearGradient id="mx_sc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#AE2236"/><stop offset="1" stop-color="#7c1526"/></linearGradient></defs><rect x="3" y="3" width="134" height="144" rx="20" fill="url(#mx_bg)"/><path d="M15 150 Q17 110 52 101 L88 101 Q123 110 125 150 Z" fill="url(#mx_cl)"/><path d="M54 101 L70 120 L86 101 L83 140 L57 140 Z" fill="#1b2747"/><circle cx="70" cy="116" r="2.4" fill="#C79A4A"/><circle cx="70" cy="126" r="2.4" fill="#C79A4A"/><ellipse cx="45.5" cy="66" rx="5" ry="7" fill="url(#mx_sk)"/><ellipse cx="94.5" cy="66" rx="5" ry="7" fill="url(#mx_sk)"/><circle cx="95" cy="73" r="2" fill="#C79A4A"/><path d="M62 82 q8 7 16 0 l0 18 q-8 5 -16 0 Z" fill="url(#mx_sk)"/><path d="M44 64 Q42 42 70 41 Q98 42 96 64 L96 58 Q70 50 44 58 Z" fill="#2a1f16"/><ellipse cx="70" cy="62" rx="25.5" ry="28.5" fill="url(#mx_sk)"/><path d="M40 44 Q70 24 100 44 Q98 33 70 31 Q42 33 40 44 Z" fill="url(#mx_sc)"/><path d="M40 44 Q70 33 100 44 L100 50 Q70 41 40 50 Z" fill="#6c1020"/><circle cx="40" cy="46" r="3" fill="#fff" opacity=".25"/><circle cx="58" cy="32.5" r="2" fill="#fff" opacity=".3"/><circle cx="78" cy="32.5" r="2" fill="#fff" opacity=".3"/><ellipse cx="60" cy="63.6" rx="4.5" ry="5.3" fill="#fff"/><ellipse cx="80" cy="63.6" rx="4.5" ry="5.3" fill="#fff"/><circle cx="60.5" cy="64.3" r="3.3" fill="#3a281c"/><circle cx="80.5" cy="64.3" r="3.3" fill="#3a281c"/><circle cx="60.5" cy="64.5" r="1.4" fill="#1c120b"/><circle cx="80.5" cy="64.5" r="1.4" fill="#1c120b"/><circle cx="59.1" cy="62.7" r="1.2" fill="#fff"/><circle cx="79.1" cy="62.7" r="1.2" fill="#fff"/><path d="M55.3 60.4 Q60 57.7 64.7 60.4" stroke="#2e2015" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M75.3 60.4 Q80 57.7 84.7 60.4" stroke="#2e2015" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M55 55 Q60 52.2 65 54.6" stroke="#2e2015" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M75 54.6 Q80 52.2 85 55" stroke="#2e2015" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M69.6 65 Q68 70.4 71 71.6" stroke="#c98a5c" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M62.6 75 Q70 82 77.4 75 Q70 79 62.6 75 Z" fill="#a85540"/><path d="M64 75.4 Q70 78.4 76 75.4" stroke="#fff" stroke-width="1" fill="none" opacity=".45"/><g fill="#b97a4e" opacity=".5"><circle cx="50" cy="69" r="1"/><circle cx="54" cy="71.5" r="1"/><circle cx="86" cy="71.5" r="1"/><circle cx="90" cy="69" r="1"/></g><ellipse cx="52.5" cy="72" rx="4.3" ry="2.6" fill="#eaa07a" opacity=".4"/><ellipse cx="87.5" cy="72" rx="4.3" ry="2.6" fill="#eaa07a" opacity=".4"/></svg>',
+    intersectional:'<svg viewBox="0 0 140 150" role="img" aria-label="交叉性 · 明媚多元"><defs><linearGradient id="in_bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2E7EE"/><stop offset="1" stop-color="#E7D2E0"/></linearGradient><radialGradient id="in_sk" cx="42%" cy="34%" r="80%"><stop offset="0" stop-color="#A06A44"/><stop offset="1" stop-color="#7e4f30"/></radialGradient><radialGradient id="in_hr" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#34211a"/><stop offset="1" stop-color="#1c0f0a"/></radialGradient><linearGradient id="in_cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6e3354"/><stop offset="1" stop-color="#4a2139"/></linearGradient></defs><rect x="3" y="3" width="134" height="144" rx="20" fill="url(#in_bg)"/><path d="M15 150 Q17 110 52 101 L88 101 Q123 110 125 150 Z" fill="url(#in_cl)"/><circle cx="50" cy="124" r="3.2" fill="#AE7C24"/><circle cx="63" cy="134" r="3.2" fill="#1E544F"/><circle cx="77" cy="132" r="3.2" fill="#C79A4A"/><circle cx="90" cy="123" r="3.2" fill="#2A3A6B"/><circle cx="57" cy="116" r="2.2" fill="#E8C7D8" opacity=".8"/><circle cx="83" cy="115" r="2.2" fill="#E8C7D8" opacity=".8"/><ellipse cx="44.5" cy="67" rx="5" ry="7" fill="url(#in_sk)"/><ellipse cx="95.5" cy="67" rx="5" ry="7" fill="url(#in_sk)"/><circle cx="44" cy="75" r="4.4" fill="none" stroke="#E2B23C" stroke-width="2.4"/><circle cx="96" cy="75" r="4.4" fill="none" stroke="#E2B23C" stroke-width="2.4"/><path d="M62 84 q8 6 16 0 l0 16 q-8 5 -16 0 Z" fill="url(#in_sk)"/><g fill="url(#in_hr)"><circle cx="46" cy="50" r="13"/><circle cx="60" cy="37" r="14"/><circle cx="80" cy="37" r="14"/><circle cx="94" cy="50" r="13"/><circle cx="42" cy="66" r="10"/><circle cx="98" cy="66" r="10"/><circle cx="52" cy="30" r="10"/><circle cx="88" cy="30" r="10"/><circle cx="70" cy="28" r="11"/></g><g fill="#4a2e22" opacity=".5"><circle cx="54" cy="40" r="4"/><circle cx="84" cy="38" r="4"/><circle cx="68" cy="32" r="4"/></g><path d="M64 26 q6 -4 12 0" stroke="#E2B23C" stroke-width="2.4" fill="none" stroke-linecap="round"/><ellipse cx="70" cy="63" rx="24.5" ry="27.5" fill="url(#in_sk)"/><ellipse cx="60" cy="64.4" rx="4.6" ry="5.4" fill="#fff"/><ellipse cx="80" cy="64.4" rx="4.6" ry="5.4" fill="#fff"/><circle cx="60.6" cy="65.1" r="3.4" fill="#23140d"/><circle cx="80.6" cy="65.1" r="3.4" fill="#23140d"/><circle cx="59.1" cy="63.4" r="1.3" fill="#fff"/><circle cx="79.1" cy="63.4" r="1.3" fill="#fff"/><path d="M55.2 61.2 Q60 58.4 64.8 61.2" stroke="#1c0f0a" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M75.2 61.2 Q80 58.4 84.8 61.2" stroke="#1c0f0a" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M55 55.4 Q60 52.6 65 55" stroke="#23140d" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M75 55 Q80 52.6 85 55.4" stroke="#23140d" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M69.6 66 Q68.2 71 71.2 72.2" stroke="#6e4530" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M61 75.6 Q70 84 79 75.6 Q70 79 61 75.6 Z" fill="#8a3f3a"/><path d="M62.5 76.4 Q70 80.6 77.5 76.4 L75.5 77.6 Q70 80 64.5 77.6 Z" fill="#fff"/><ellipse cx="52" cy="73" rx="4.4" ry="2.7" fill="#c97a64" opacity=".45"/><ellipse cx="88" cy="73" rx="4.4" ry="2.7" fill="#c97a64" opacity=".45"/></svg>',
+    postmodern:'<svg viewBox="0 0 140 150" role="img" aria-label="后现代 · 撞色酷儿"><defs><linearGradient id="pm_bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E3EEEC"/><stop offset="1" stop-color="#D6E6E2"/></linearGradient><radialGradient id="pm_sk" cx="42%" cy="34%" r="78%"><stop offset="0" stop-color="#F5D2AF"/><stop offset="1" stop-color="#E9BD96"/></radialGradient><linearGradient id="pm_h1" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#2c7a72"/><stop offset="1" stop-color="#143f3a"/></linearGradient><linearGradient id="pm_h2" x1="0" y1="0" x2=".4" y2="1"><stop offset="0" stop-color="#d77aa6"/><stop offset="1" stop-color="#a8447a"/></linearGradient><linearGradient id="pm_cl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#23615b"/><stop offset=".55" stop-color="#23615b"/><stop offset=".55" stop-color="#6e3354"/><stop offset="1" stop-color="#54283f"/></linearGradient></defs><rect x="3" y="3" width="134" height="144" rx="20" fill="url(#pm_bg)"/><path d="M15 150 Q17 110 52 101 L88 101 Q123 110 125 150 Z" fill="url(#pm_cl)"/><path d="M60 101 L70 116 L80 101 Z" fill="#fff" opacity=".18"/><ellipse cx="45.5" cy="66" rx="5" ry="7" fill="url(#pm_sk)"/><ellipse cx="94.5" cy="66" rx="5" ry="7" fill="url(#pm_sk)"/><path d="M62 82 q8 7 16 0 l0 18 q-8 5 -16 0 Z" fill="url(#pm_sk)"/><path d="M41 66 Q40 29 70 28 L70 100 Q50 98 44 80 Q40 72 41 66 Z" fill="url(#pm_h1)"/><path d="M99 66 Q100 29 70 28 L70 100 Q90 98 96 80 Q100 72 99 66 Z" fill="url(#pm_h2)"/><path d="M44 50 Q43 42 49 38 L52 60 Z" fill="#0f322e"/><ellipse cx="70" cy="62" rx="25.5" ry="28.5" fill="url(#pm_sk)"/><path d="M44 62 Q44 36 70 33 L70 44 Q54 45 49 60 Q46 53 44 62 Z" fill="url(#pm_h1)"/><path d="M96 62 Q96 36 70 33 L70 44 Q86 45 91 60 Q94 53 96 62 Z" fill="url(#pm_h2)"/><ellipse cx="60" cy="63.6" rx="4.6" ry="5.3" fill="#fff"/><ellipse cx="80" cy="63.6" rx="4.6" ry="5.3" fill="#fff"/><circle cx="60.6" cy="64.3" r="3.3" fill="#3a2a24"/><circle cx="80.6" cy="64.3" r="3.3" fill="#3a2a24"/><circle cx="59.2" cy="62.7" r="1.2" fill="#fff"/><circle cx="79.2" cy="62.7" r="1.2" fill="#fff"/><path d="M55.3 60.6 Q60 58 64.7 60.6" stroke="#33231c" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M75.3 60.6 Q80 58 84.7 60.6" stroke="#33231c" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M54.4 56 Q60 52.6 65.6 54.6" stroke="#33231c" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M74.6 53.2 Q80 50.4 85.4 52.8" stroke="#33231c" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M69.6 65 Q68 70.2 71 71.4" stroke="#d29b76" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M62 76.5 Q68 79 78 75.5 Q72 80 64 79 Z" fill="#bf6a86"/><ellipse cx="52.5" cy="71" rx="4.4" ry="2.7" fill="#7fcfc6" opacity=".5"/><ellipse cx="87.5" cy="71" rx="4.4" ry="2.7" fill="#e7a8c6" opacity=".55"/><path d="M48 79 l1.4 3 3.2 .4 -2.4 2.2 .7 3.2 -2.9 -1.6 -2.9 1.6 .7 -3.2 -2.4 -2.2 3.2 -.4 Z" fill="#E2B23C"/><circle cx="92" cy="80" r="3" fill="none" stroke="#a8447a" stroke-width="2"/></svg>',
+    cultural:'<svg viewBox="0 0 140 150" role="img" aria-label="关怀 · 温柔治愈"><defs><linearGradient id="cl_bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8F0DD"/><stop offset="1" stop-color="#F1E4CA"/></linearGradient><radialGradient id="cl_sk" cx="42%" cy="34%" r="78%"><stop offset="0" stop-color="#F6D2AE"/><stop offset="1" stop-color="#EABF98"/></radialGradient><linearGradient id="cl_hr" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#7a4e30"/><stop offset="1" stop-color="#543320"/></linearGradient><linearGradient id="cl_cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C28A2C"/><stop offset="1" stop-color="#9c6c1f"/></linearGradient></defs><rect x="3" y="3" width="134" height="144" rx="20" fill="url(#cl_bg)"/><path d="M14 150 Q16 112 50 102 L90 102 Q124 112 126 150 Z" fill="url(#cl_cl)"/><path d="M70 104 Q61 116 70 127 Q79 116 70 104 Z" fill="#fff" opacity=".5"/><ellipse cx="45.5" cy="66" rx="5" ry="7" fill="url(#cl_sk)"/><ellipse cx="94.5" cy="66" rx="5" ry="7" fill="url(#cl_sk)"/><circle cx="45" cy="73.5" r="2.2" fill="#F0E3C0"/><circle cx="95" cy="73.5" r="2.2" fill="#F0E3C0"/><path d="M62 82 q8 7 16 0 l0 18 q-8 5 -16 0 Z" fill="url(#cl_sk)"/><path d="M39 60 Q37 26 70 26 Q103 26 101 60 L103 120 Q94 116 91 76 Q89 67 85 62 L55 62 Q51 67 49 76 Q46 116 37 120 Z" fill="url(#cl_hr)"/><path d="M37 120 Q40 100 44 86 Q42 108 41 122 Z" fill="#634027" opacity=".6"/><path d="M103 120 Q100 100 96 86 Q98 108 99 122 Z" fill="#634027" opacity=".6"/><ellipse cx="70" cy="62" rx="25.5" ry="28.5" fill="url(#cl_sk)"/><path d="M40 60 Q38 26 70 26 Q102 26 100 60 Q95 47 84 45 Q70 41 56 45 Q45 47 40 60 Z" fill="url(#cl_hr)"/><path d="M46 50 Q57 41 70 41 Q60 45 51 53 Q47 57 46 50 Z" fill="#8a5c3a" opacity=".5"/><path d="M55 62.5 Q60 66.5 65 62.5" stroke="#5a3a24" stroke-width="2.1" fill="none" stroke-linecap="round"/><path d="M75 62.5 Q80 66.5 85 62.5" stroke="#5a3a24" stroke-width="2.1" fill="none" stroke-linecap="round"/><path d="M57.5 60.5 q2.5 1.5 5 0" stroke="#5a3a24" stroke-width="1" fill="none" stroke-linecap="round" opacity=".6"/><path d="M77.5 60.5 q2.5 1.5 5 0" stroke="#5a3a24" stroke-width="1" fill="none" stroke-linecap="round" opacity=".6"/><path d="M55 54.6 Q60 52.2 65 54.4" stroke="#5a3a24" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M75 54.4 Q80 52.2 85 54.6" stroke="#5a3a24" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M69.6 65.5 Q68.2 70.4 71 71.6" stroke="#d29b76" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M63.5 74.5 Q70 80.5 76.5 74.5 Q70 78 63.5 74.5 Z" fill="#c4715a"/><path d="M64.5 75 Q70 77.6 75.5 75" stroke="#fff" stroke-width="1" fill="none" opacity=".5"/><ellipse cx="51.5" cy="71.5" rx="4.7" ry="3" fill="#f3b59c" opacity=".55"/><ellipse cx="88.5" cy="71.5" rx="4.7" ry="3" fill="#f3b59c" opacity=".55"/><g transform="translate(49,41)"><circle cx="0" cy="0" r="3.4" fill="#E26A78"/><g fill="#E9959F"><ellipse cx="0" cy="-5.4" rx="2.6" ry="3.8"/><ellipse cx="0" cy="5.4" rx="2.6" ry="3.8"/><ellipse cx="-5.4" cy="0" rx="3.8" ry="2.6"/><ellipse cx="5.4" cy="0" rx="3.8" ry="2.6"/></g><circle cx="0" cy="0" r="2.2" fill="#F4D27A"/></g></svg>',
+    faith:'<svg viewBox="0 0 140 150" role="img" aria-label="信仰 · 端庄从容"><defs><linearGradient id="fa_bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0E8DA"/><stop offset="1" stop-color="#E7DAC4"/></linearGradient><radialGradient id="fa_sk" cx="42%" cy="36%" r="76%"><stop offset="0" stop-color="#D7A06C"/><stop offset="1" stop-color="#C0884E"/></radialGradient><linearGradient id="fa_sc" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#C79A5E"/><stop offset="1" stop-color="#8f6536"/></linearGradient><linearGradient id="fa_cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a6038"/><stop offset="1" stop-color="#6a4626"/></linearGradient></defs><rect x="3" y="3" width="134" height="144" rx="20" fill="url(#fa_bg)"/><path d="M16 150 Q18 112 50 102 L90 102 Q122 112 124 150 Z" fill="url(#fa_cl)"/><path d="M32 98 Q28 54 70 48 Q112 54 108 98 L101 106 Q94 74 70 74 Q46 74 39 106 Z" fill="url(#fa_sc)"/><path d="M39 106 Q39 132 49 150 L39 150 Q28 122 33 100 Z" fill="#9c6c3c"/><path d="M101 106 Q101 132 91 150 L101 150 Q112 122 107 100 Z" fill="#9c6c3c"/><path d="M32 98 Q40 70 70 70 Q56 76 48 92 Q42 100 32 98 Z" fill="#d4ab74" opacity=".5"/><ellipse cx="70" cy="64" rx="23.5" ry="26.5" fill="url(#fa_sk)"/><path d="M47 62 Q47 44 70 44 Q93 44 93 62 Q90 50 70 50 Q50 50 47 62 Z" fill="url(#fa_sc)"/><ellipse cx="60" cy="65.4" rx="4.6" ry="5.3" fill="#fff"/><ellipse cx="80" cy="65.4" rx="4.6" ry="5.3" fill="#fff"/><circle cx="60.6" cy="66.1" r="3.3" fill="#33221a"/><circle cx="80.6" cy="66.1" r="3.3" fill="#33221a"/><circle cx="60.6" cy="66.3" r="1.4" fill="#1a0f0a"/><circle cx="80.6" cy="66.3" r="1.4" fill="#1a0f0a"/><circle cx="59.2" cy="64.5" r="1.2" fill="#fff"/><circle cx="79.2" cy="64.5" r="1.2" fill="#fff"/><path d="M55.3 62.2 Q60 59.4 64.7 62.2" stroke="#2c1d14" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M75.3 62.2 Q80 59.4 84.7 62.2" stroke="#2c1d14" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M55 56.6 Q60 53.8 65 56.2" stroke="#2c1d14" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M75 56.2 Q80 53.8 85 56.6" stroke="#2c1d14" stroke-width="1.9" fill="none" stroke-linecap="round"/><path d="M69.6 67 Q68 72 71 73.2" stroke="#b07c4e" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M63.5 77 Q70 82.6 76.5 77 Q70 80 63.5 77 Z" fill="#a85c44"/><path d="M64.5 77.4 Q70 79.8 75.5 77.4" stroke="#fff" stroke-width="1" fill="none" opacity=".45"/><ellipse cx="53" cy="73.5" rx="4.4" ry="2.8" fill="#e09870" opacity=".45"/><ellipse cx="87" cy="73.5" rx="4.4" ry="2.8" fill="#e09870" opacity=".45"/><g transform="translate(98,96)"><circle r="3.4" fill="#E2B23C"/><circle r="1.5" fill="#fff" opacity=".8"/></g></svg>',
+    eco:'<svg viewBox="0 0 140 150" role="img" aria-label="生态 · 自然灵动"><defs><linearGradient id="ec_bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9F0DF"/><stop offset="1" stop-color="#D9E6C8"/></linearGradient><radialGradient id="ec_sk" cx="42%" cy="34%" r="80%"><stop offset="0" stop-color="#E9BB85"/><stop offset="1" stop-color="#D6A063"/></radialGradient><linearGradient id="ec_hr" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#6a4a2c"/><stop offset="1" stop-color="#46301c"/></linearGradient><linearGradient id="ec_cl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46663a"/><stop offset="1" stop-color="#314827"/></linearGradient></defs><rect x="3" y="3" width="134" height="144" rx="20" fill="url(#ec_bg)"/><path d="M14 150 Q16 112 50 102 L90 102 Q124 112 126 150 Z" fill="url(#ec_cl)"/><path d="M70 104 q-3 8 0 16 q3 -8 0 -16 Z" fill="#fff" opacity=".25"/><ellipse cx="45.5" cy="66" rx="5" ry="7" fill="url(#ec_sk)"/><ellipse cx="94.5" cy="66" rx="5" ry="7" fill="url(#ec_sk)"/><path d="M62 82 q8 7 16 0 l0 18 q-8 5 -16 0 Z" fill="url(#ec_sk)"/><path d="M40 62 Q38 28 70 28 Q102 28 100 62 L100 108 Q95 102 92 74 L88 64 L52 64 L48 74 Q45 102 40 108 Z" fill="url(#ec_hr)"/><ellipse cx="70" cy="62" rx="25.5" ry="28.5" fill="url(#ec_sk)"/><path d="M40 62 Q38 28 70 28 Q102 28 100 62 Q95 48 84 45 Q70 41 56 45 Q45 48 40 62 Z" fill="url(#ec_hr)"/><path d="M46 51 Q57 42 70 42 Q60 46 51 54 Q47 58 46 51 Z" fill="#7d5836" opacity=".5"/><g transform="translate(48,42) rotate(-20)"><path d="M0 0 Q-7 -6 -3 -14 Q5 -8 0 0 Z" fill="#5a7a3c"/><path d="M-1.5 -2 Q-3 -8 -2.5 -12" stroke="#3f5a28" stroke-width="1" fill="none"/></g><g transform="translate(90,44) rotate(25)"><path d="M0 0 Q7 -6 3 -14 Q-5 -8 0 0 Z" fill="#6a8a48"/></g><circle cx="84" cy="38" r="3.6" fill="#E2B23C"/><circle cx="80.5" cy="35" r="2.6" fill="#EBC766"/><circle cx="84" cy="38" r="1.4" fill="#9c6c1f"/><ellipse cx="60" cy="63.6" rx="4.6" ry="5.3" fill="#fff"/><ellipse cx="80" cy="63.6" rx="4.6" ry="5.3" fill="#fff"/><circle cx="60.6" cy="64.3" r="3.3" fill="#3c2a1e"/><circle cx="80.6" cy="64.3" r="3.3" fill="#3c2a1e"/><circle cx="60.6" cy="64.5" r="1.4" fill="#1d130c"/><circle cx="80.6" cy="64.5" r="1.4" fill="#1d130c"/><circle cx="59.2" cy="62.7" r="1.2" fill="#fff"/><circle cx="79.2" cy="62.7" r="1.2" fill="#fff"/><path d="M55.3 60.4 Q60 57.7 64.7 60.4" stroke="#30221a" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M75.3 60.4 Q80 57.7 84.7 60.4" stroke="#30221a" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M55 54.8 Q60 52.4 65 54.6" stroke="#30221a" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M75 54.6 Q80 52.4 85 54.8" stroke="#30221a" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M69.6 65 Q68 70.2 71 71.4" stroke="#c4885a" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M63 75 Q70 81.5 77 75 Q70 78.5 63 75 Z" fill="#bb6a4a"/><path d="M64 75.4 Q70 78.2 76 75.4" stroke="#fff" stroke-width="1" fill="none" opacity=".5"/><g fill="#b87a4a" opacity=".6"><circle cx="54" cy="70" r="1"/><circle cx="58" cy="72.5" r="1"/><circle cx="62" cy="70.5" r="1"/><circle cx="78" cy="70.5" r="1"/><circle cx="82" cy="72.5" r="1"/><circle cx="86" cy="70" r="1"/><circle cx="70" cy="73.5" r="1"/></g><ellipse cx="52" cy="73" rx="4.4" ry="2.7" fill="#eaa672" opacity=".45"/><ellipse cx="88" cy="73" rx="4.4" ry="2.7" fill="#eaa672" opacity=".45"/></svg>'
+  };
+
+  /* ============================ 题库（20 题）============================
+     w：流派权重（结果主依据）。 dx：改良(−) ↔ 革命(+)。 dy：同一/普遍(−) ↔ 差异/多元(+)。
+     权重力求贴合各流派的真实理论立场；敏感议题（跨性别、性工作、面纱等）中立并列各方。 */
+  var Q=[
+    {t:'如果只能指出一个压迫女性<b>最根本</b>的根源，你会选——',
+     o:[{t:'法律与制度上仍未真正平等。',w:{liberal:3},dx:-2,dy:-1},
+        {t:'父权制本身——一套男性支配的性别秩序。',w:{radical:3},dx:1,dy:-1},
+        {t:'资本主义与父权合谋，阶级与经济才是关键。',w:{marxist:3},dx:2},
+        {t:'多重压迫的交织，没有单一根源。',w:{intersectional:3},dx:1,dy:1},
+        {t:'一种"支配万物"的逻辑，既统治女性也征服自然。',w:{eco:3},dx:1,dy:1}]},
+    {t:'"女性"这一身份，最应由什么来界定？',
+     o:[{t:'生理性别，以及作为女孩长大的共同经验。',w:{radical:3},dy:-2},
+        {t:'一个人真诚的自我性别认同。',w:{postmodern:4},dy:2},
+        {t:'根本不存在单一的"女性"，它因处境而异。',w:{intersectional:2,postmodern:1},dy:2}]},
+    {t:'你心中"理想的平等"更接近——',
+     o:[{t:'女性获得与男性<b>完全一样</b>的权利与对待。',w:{liberal:3},dy:-2},
+        {t:'被贬低的"女性特质"（关怀·连结）被重新<b>珍视</b>。',w:{cultural:4},dy:2},
+        {t:'不再以任何固定的"男/女"标准来衡量人。',w:{postmodern:3},dy:2}]},
+    {t:'推动改变，你<b>最信任</b>的路径是——',
+     o:[{t:'在体制内修法、改政策、提升女性参政与就业。',w:{liberal:3},dx:-2,dy:-1},
+        {t:'提高意识、组织集体行动，从根本上改造结构。',w:{radical:3},dx:2},
+        {t:'把性别斗争和反资本、反殖民的斗争结合。',w:{marxist:2,intersectional:1},dx:2},
+        {t:'在日常语言与文化里，瓦解"男/女"二元。',w:{postmodern:3},dx:1,dy:1}]},
+    {t:'一位女性当上了大公司 CEO——',
+     o:[{t:'实打实的进步，玻璃天花板被打破，值得庆祝。',w:{liberal:3},dx:-1},
+        {t:'要看她是否复制了压迫："进入"旧体系不等于"胜利"。',w:{radical:1,marxist:2},dx:2},
+        {t:'对流水线上的女工来说，这几乎毫无意义。',w:{marxist:3},dx:1}]},
+    {t:'对"我的偏好就是我自由意志的体现"这句话，你——',
+     o:[{t:'认同：尊重一个人对自身体验的最终陈述，是底线。',w:{liberal:2,postmodern:1},dx:-1},
+        {t:'怀疑：偏好可能是被规训出的"适应性偏好"。',w:{radical:2,cultural:1},dx:1}]},
+    {t:'她说"戴头巾是我自愿的虔诚"，而一位西方学者称那是压迫。你更认同——',
+     o:[{t:'若某做法压迫女性，文化或信仰都不能成为豁免理由。',w:{liberal:2,radical:1},dx:-1,dy:-1},
+        {t:'用单一标准评判她本身就是傲慢——该由她自己定义自由。',w:{intersectional:2,faith:2},dy:2},
+        {t:'信仰与女性主义不冲突，可以从传统<b>内部</b>争取平等。',w:{faith:4},dx:-1,dy:1}]},
+    {t:'对<b>性工作</b>，你的立场更接近——',
+     o:[{t:'它是父权与经济双重剥削的产物，应当被看穿。',w:{radical:3},dx:1,dy:-1},
+        {t:'在安全与自愿前提下，是女性的身体与劳动自主。',w:{liberal:2,postmodern:2},dx:-1,dy:1},
+        {t:'关键要问：是谁、在什么处境下"被迫自愿"？',w:{marxist:2,intersectional:1},dx:1,dy:1}]},
+    {t:'谈"女性受压迫"时，你<b>最先</b>想到的是——',
+     o:[{t:'法律与职场中仍存在的不平等。',w:{liberal:3},dx:-1,dy:-1},
+        {t:'全球供应链最底层的女工。',w:{marxist:3},dx:1},
+        {t:'被种族·阶级·身份多重边缘化的女性。',w:{intersectional:3},dy:2},
+        {t:'不同文化与信仰中，女性自己未被听见的声音。',w:{faith:2,intersectional:1},dy:2}]},
+    {t:'"人对自然的征服"与"男性对女性的支配"，是同一种逻辑吗？',
+     o:[{t:'是，同根同源——都是"支配—被支配"的逻辑。',w:{eco:4},dx:1,dy:1},
+        {t:'有深刻关联，但要放进多重压迫里一起看。',w:{eco:2,intersectional:2},dy:1},
+        {t:'这是两回事，不该混为一谈。',w:{liberal:1,radical:1},dy:-1}]},
+    {t:'对"跨性别女性是否属于女性运动"，你更倾向——<span style="font-weight:400;color:var(--ink-faint)">（当代最尖锐的争论，无标准答案）</span>',
+     o:[{t:'属于：性别认同应被尊重，运动须包容。',w:{postmodern:4},dy:2},
+        {t:'审慎：某些以生理性别为前提的空间与议题应被保留。',w:{radical:3},dy:-2},
+        {t:'这恰恰说明"女性"无法被单一定义，要看具体处境。',w:{intersectional:2,postmodern:1},dy:2}]},
+    {t:'男性在女性主义里的位置，你认为——',
+     o:[{t:'重要的盟友；在不同文化与信仰里都应共同参与。',w:{liberal:2,faith:1}},
+        {t:'可以参与，但更要倾听被边缘化女性的声音。',w:{intersectional:2,cultural:1},dy:1},
+        {t:'某些空间应由女性自主、必要时排除男性。',w:{radical:3},dx:1,dy:-1}]},
+    {t:'对"无偿家务与照护劳动"，你的看法是——',
+     o:[{t:'它被隐形了，应在社会与经济上被承认、被计酬。',w:{marxist:3},dx:1},
+        {t:'它体现的"关怀"本身有价值，该被尊重而非贬低。',w:{cultural:3},dy:1},
+        {t:'关键是家庭内分工的平等，可通过观念与政策改善。',w:{liberal:2},dx:-1,dy:-1}]},
+    {t:'面对"女性应当好看"这一期待，你——',
+     o:[{t:'这是被内化的"男性凝视"，应当被批判和松绑。',w:{radical:2,cultural:1},dx:1},
+        {t:'打扮与否是个人自由，不该被任何一方规定。',w:{liberal:2,postmodern:2},dx:-1,dy:1},
+        {t:'美的标准由文化与资本塑造，要追问它从哪来。',w:{marxist:2,intersectional:1},dx:1,dy:1}]},
+    {t:'对"姐妹情谊是全球共通的"这句话，你——',
+     o:[{t:'基本认同：性别是首要的、共同的战线。',w:{radical:2,liberal:1},dy:-2},
+        {t:'警惕：它常悄悄抹去种族·阶级·文化的差异。',w:{intersectional:3},dy:2}]},
+    {t:'女性主义与宗教信仰，能否相容？',
+     o:[{t:'能，且能从信仰传统内部生长出女性的能动空间。',w:{faith:4},dy:1},
+        {t:'多数宗教制度本质上服务父权，需保持批判。',w:{radical:2,liberal:1},dx:1,dy:-1},
+        {t:'不该用单一世俗标准去判定他人"其实并不自由"。',w:{faith:2,intersectional:2},dy:2}]},
+    {t:'"个人即政治"对你意味着——',
+     o:[{t:'私人困境（家务·亲密关系·身体）其实是结构问题。',w:{radical:2,marxist:1},dx:1},
+        {t:'所以要从立法与公共政策上去改变这些"私事"。',w:{liberal:2},dx:-1,dy:-1},
+        {t:'也要承认：不同处境的人，"政治"长得很不一样。',w:{intersectional:2},dy:1}]},
+    {t:'对主流<b>色情产业</b>，你更倾向——',
+     o:[{t:'它系统性地物化女性，服务于男性凝视。',w:{radical:3},dx:1,dy:-1},
+        {t:'性表达可以是赋权的，关键在自主与同意。',w:{postmodern:2,liberal:1},dy:1},
+        {t:'要看产业链背后的剥削结构与谁在获利。',w:{marxist:3},dx:1}]},
+    {t:'对"性别配额"（如董事会女性比例）这类措施，你——',
+     o:[{t:'支持：这是纠正历史不平等的有效手段。',w:{liberal:3},dx:-1,dy:-1},
+        {t:'治标不治本：不动结构，只让少数女性受益。',w:{radical:2,marxist:2},dx:2},
+        {t:'还要问：是哪些女性受益？会不会又排除了边缘群体？',w:{intersectional:3},dy:1}]},
+    {t:'你心中理想的"终局"是——',
+     o:[{t:'在现有社会里，人人不因性别受限，机会真正平等。',w:{liberal:3},dx:-2,dy:-1},
+        {t:'父权被连根推翻，女性真正自主。',w:{radical:3},dx:2,dy:-1},
+        {t:'"男/女"的区分被彻底松动，不再定义任何人。',w:{postmodern:3},dx:1,dy:2},
+        {t:'人与人、人与自然之间，"支配"被"关怀"取代。',w:{eco:2,cultural:2},dy:1}]}
+  ];
+
+  /* ============================ 状态与计分 ============================ */
+  var idx=0, answers=[], scores={}, cx=0, cy=0, lastData=null;
+  function resetScores(){ scores={}; Object.keys(F).forEach(function(k){scores[k]=0;}); cx=0; cy=0; }
+
+  function setProgress(p){ progress.style.width=Math.max(0,Math.min(100,p))+'%'; }
+
+  /* ---------- 开始页 ---------- */
+  function renderIntro(){
+    setProgress(0);
+    var strip=Object.keys(F).map(function(k,i){return '<span class="cs" style="animation-delay:'+(0.32+i*0.06).toFixed(2)+'s">'+CHAR[k]+'</span>';}).join('');
+    app.innerHTML=''+
+      '<section class="intro">'+
+        '<div class="kicker">价值自测 · Self-test</div>'+
+        '<h1>你站在哪一边？<span class="en">Where Do You Stand?</span></h1>'+
+        '<p class="lede">女性主义不是一种声音，而是<b>一组互相竞争的范式</b>。这份测试用 <b>20 道题</b>，照出你此刻最接近哪一个流派——并为你画一个专属形象。</p>'+
+        '<div class="char-arc" aria-hidden="true">'+strip+'</div>'+
+        '<div class="meta"><span>20 道题</span><span>约 4 分钟</span><span>8 种流派画像</span><span>凭直觉，没有对错</span></div>'+
+        '<button class="start-btn" data-act="start">开始自测 →</button>'+
+        '<p class="tiny">题目涉及一些尖锐争论（性工作、跨性别、信仰…），各方立场中立并列；这只是一面镜子，不是判决。</p>'+
+      '</section>';
+  }
+
+  /* ---------- 题目 ---------- */
+  function pad(n){return n<10?'0'+n:''+n;}
+  function renderQ(){
+    var q=Q[idx];
+    setProgress(idx/Q.length*100);
+    var h='<div class="qcard">';
+    h+='<div class="qhead"><div class="qnum"><b>'+pad(idx+1)+'</b> / '+Q.length+'</div><button class="q-skip" data-act="skip">跳过 ›</button></div>';
+    h+='<div class="qbar"><i style="width:'+(idx/Q.length*100).toFixed(1)+'%"></i></div>';
+    h+='<div class="quiz-body"><div class="q-text cjk">'+q.t+'</div><div class="q-opts">';
+    q.o.forEach(function(op,i){ h+='<button class="q-opt cjk" data-i="'+i+'" style="animation-delay:'+(0.08+i*0.07).toFixed(2)+'s"><span class="dot"></span><span class="otext">'+op.t+'</span></button>'; });
+    h+='</div><div class="q-nav"><button class="q-back" data-act="back"'+(idx===0?' disabled':'')+'>‹ 上一题</button><span class="q-hint">凭直觉，选最贴近的</span></div>';
+    h+='</div></div>';
+    app.innerHTML=h;
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function choose(i){ var q=Q[idx]; if(!q||!q.o[i])return; answers[idx]={i:i,op:q.o[i]}; idx++; if(idx>=Q.length){compute();}else{renderQ();} }
+  function skip(){ answers[idx]={i:-1}; idx++; if(idx>=Q.length){compute();}else{renderQ();} }
+  function back(){ if(idx>0){ idx--; answers[idx]=undefined; renderQ(); } }
+
+  function compute(){
+    resetScores();
+    answers.forEach(function(a){
+      if(!a||a.i<0) return;
+      var w=a.op.w||{}; Object.keys(w).forEach(function(k){ if(scores[k]!=null) scores[k]+=w[k]; });
+      if(a.op.dx) cx+=a.op.dx;
+      if(a.op.dy) cy+=a.op.dy;
+    });
+    renderResult();
+  }
+
+  /* ---------- 罗盘（X：改良−/革命+ ；Y：同一−/差异+）---------- */
+  function compassSVG(x,y){
+    var mxx=14,myy=12;
+    var px=Math.max(-mxx,Math.min(mxx,x))/mxx, py=Math.max(-myy,Math.min(myy,y))/myy;
+    var X=(150+px*108).toFixed(1), Y=(150-py*108).toFixed(1);
+    var col=SC[lastData.primary]||'#9A1B30', ks='.34 1.56 .64 1';
+    function anim(){return '<animate attributeName="cx" from="150" to="'+X+'" dur="1s" begin="0.25s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="'+ks+'"/><animate attributeName="cy" from="150" to="'+Y+'" dur="1s" begin="0.25s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="'+ks+'"/>';}
+    return '<div class="compass"><svg viewBox="0 0 300 300" role="img" aria-label="你的价值坐标">'+
+      '<defs><radialGradient id="cg"><stop offset="0%" stop-color="'+col+'" stop-opacity=".16"/><stop offset="100%" stop-color="'+col+'" stop-opacity="0"/></radialGradient></defs>'+
+      '<rect x="40" y="40" width="220" height="220" rx="14" fill="none" stroke="#E0D6C2" stroke-width="1.5"/>'+
+      '<line x1="150" y1="40" x2="150" y2="260" stroke="#ECE3D2" stroke-width="1"/>'+
+      '<line x1="40" y1="150" x2="260" y2="150" stroke="#ECE3D2" stroke-width="1"/>'+
+      '<circle cx="150" cy="150" r="46" fill="url(#cg)">'+anim()+'</circle>'+
+      '<g font-family="Archivo,sans-serif" font-size="11" letter-spacing="1" fill="#8A7C6A">'+
+        '<text x="150" y="30" text-anchor="middle">差异 / 多元</text>'+
+        '<text x="150" y="286" text-anchor="middle">同一 / 普遍</text>'+
+        '<text x="30" y="154" text-anchor="end">改良</text>'+
+        '<text x="270" y="154" text-anchor="start">革命</text>'+
+      '</g>'+
+      '<circle cx="150" cy="150" r="9" fill="'+col+'">'+anim()+'</circle>'+
+      '<circle cx="150" cy="150" r="9" fill="none" stroke="'+col+'" stroke-width="2">'+anim()+'<animate attributeName="r" values="9;18;9" dur="2.4s" begin="1.3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".6;0;.6" dur="2.4s" begin="1.3s" repeatCount="indefinite"/></circle>'+
+      '</svg></div>';
+  }
+
+  /* ---------- 结果 ---------- */
+  function hexA(hex,a){var n=parseInt(hex.slice(1),16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+  function darken(hex,f){var n=parseInt(hex.slice(1),16);return 'rgb('+Math.round(((n>>16)&255)*f)+','+Math.round(((n>>8)&255)*f)+','+Math.round((n&255)*f)+')';}
+  function countUp(el,target){var t0=null,dur=900;function step(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/dur);var e=1-Math.pow(1-k,3);el.textContent=Math.round(e*target)+'%';if(k<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+  function renderResult(){
+    setProgress(100);
+    var ranked=Object.keys(scores).map(function(k){return {k:k,v:scores[k]};}).sort(function(a,b){return b.v-a.v;});
+    var max=ranked[0].v||1, any=ranked[0].v>0;
+    var primary=ranked[0].k;
+    var secondary=ranked[1]&&ranked[1].v>0&&ranked[1].v>=max*0.5?ranked[1].k:null;
+    lastData={ranked:ranked,primary:primary,secondary:secondary,max:max,cx:cx,cy:cy};
+    var P=F[primary], S=secondary?F[secondary]:null;
+
+    if(!any){
+      app.innerHTML='<div class="rcard"><div class="r-hero"><div class="r-eyebrow">结果 · Result</div><h2 class="r-name">你几乎全部跳过了</h2></div><div class="r-body"><p class="r-lead cjk">这面镜子需要你先照进去。回到题目，凭直觉选就好——没有人会看到。</p><div class="q-actions"><button class="q-btn" data-act="restart">开始自测</button></div></div></div>';
+      window.scrollTo({top:0,behavior:'smooth'}); return;
+    }
+
+    var col=SC[primary];
+    var h='<div class="rcard" style="--halo:'+hexA(col,.16)+'">';
+    h+='<div class="r-hero">';
+    h+='<div class="r-eyebrow">你的女性主义画像 · Your Portrait</div>';
+    h+='<div class="r-portrait">'+CHAR[primary]+'</div>';
+    h+='<h2 class="r-name">'+P.card+'<span class="r-en">'+P.en+'</span></h2>';
+    h+='<span class="r-tag" style="background:'+col+'">最接近的流派 · Closest match</span>';
+    h+='</div><div class="r-body">';
+    h+='<p class="r-lead cjk">'+P.lead+'</p>';
+    if(S){ h+='<p class="r-second cjk">你身上还带着一层<b>'+S.s+'</b>的影子——很正常，少有人是纯粹的某一派。</p>'; }
+    h+='<div class="r-sec-title">契合程度 · Distribution</div><div class="r-bars">';
+    ranked.slice(0,6).forEach(function(r,n){
+      var p=Math.round(r.v/max*100), c=SC[r.k];
+      h+='<div class="r-row'+(n===0?' top':'')+'"><span>'+F[r.k].s+'</span><span class="r-track"><span class="r-fill" data-w="'+p+'" style="background:'+c+'"></span></span><span class="r-pct" data-w="'+p+'" style="color:'+c+'">0%</span></div>';
+    });
+    h+='</div>';
+    h+='<div class="r-sec-title">价值坐标 · Compass</div>'+compassSVG(cx,cy);
+    h+='<div class="r-sec-title">细节 · Details</div><div class="r-grid"><div class="r-cell"><h6>代表人物</h6><p class="cjk">'+P.rep+'</p></div><div class="r-cell"><h6>最可能与谁冲突</h6><p class="cjk">'+P.clash+'</p></div></div>';
+    h+='<blockquote class="r-quote cjk">'+P.q+'<cite>—— '+P.qa+'</cite></blockquote>';
+    h+='<p class="r-caveat cjk">这只是一面镜子，不是判决：它反映的是你此刻的倾向，而非永久的标签。派系会过时，你借此看清的那条"律条"，才真正属于你。</p>';
+    h+='<div class="q-actions"><button class="q-btn" data-act="card">◆ 生成结果卡</button><button class="q-btn ghost" data-act="copy">复制文案</button><button class="q-btn ghost" data-act="restart">重测</button><span class="copied" id="copied" hidden>已复制 ✓</span></div>';
+    h+='<div class="share-out" id="shareOut" hidden></div>';
+    h+='</div></div>';
+    app.innerHTML=h;
+    window.scrollTo({top:0,behavior:'smooth'});
+    var body=app.querySelector('.r-body');
+    if(body){ Array.prototype.forEach.call(body.children,function(el,i){ el.style.animationDelay=(0.45+i*0.07).toFixed(2)+'s'; }); }
+    setTimeout(function(){
+      Array.prototype.forEach.call(app.querySelectorAll('.r-fill'),function(f){ f.style.width=f.getAttribute('data-w')+'%'; });
+      Array.prototype.forEach.call(app.querySelectorAll('.r-pct'),function(el){ countUp(el,parseInt(el.getAttribute('data-w'),10)); });
+    },680);
+  }
+
+  function copyResult(){
+    if(!lastData) return;
+    var P=F[lastData.primary], S=lastData.secondary?F[lastData.secondary]:null;
+    var txt='我的女性主义流派是「'+P.s+'」'+(S?'，兼有「'+S.s+'」倾向':'')+'。\n你是哪一派？来测测 → '+location.href;
+    var done=function(){ var c=document.getElementById('copied'); if(c){c.hidden=false; setTimeout(function(){c.hidden=true;},2200);} };
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done,done); }
+    else{ try{ var t=document.createElement('textarea'); t.value=txt; document.body.appendChild(t); t.select(); document.execCommand('copy'); document.body.removeChild(t); done(); }catch(e){} }
+  }
+
+  /* ---------- 可下载结果卡（canvas，含人物形象）---------- */
+  function strip(s){return (s||'').replace(/<[^>]+>/g,'');}
+  function ensureFonts(){
+    if(!document.fonts||!document.fonts.load) return Promise.resolve();
+    var L=['900 64px "Fraunces"','italic 30px "Fraunces"','700 24px "Archivo"','600 22px "Archivo"','400 30px "Noto Sans SC"','700 26px "Noto Sans SC"'];
+    try{ return Promise.all(L.map(function(f){return document.fonts.load(f);})).catch(function(){}); }catch(e){ return Promise.resolve(); }
+  }
+  function rr(ctx,x,y,w,h,r){ if(w<2*r)r=w/2; if(h<2*r)r=h/2; ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+  function cwrap(ctx,s,x,y,maxW,lh,max){ var line='',out=y,i,t,n=0; for(i=0;i<s.length;i++){ t=line+s[i]; if(ctx.measureText(t).width>maxW && line){ ctx.fillText(line,x,out); n++; if(max&&n>=max){ ctx.fillText('…',x+ctx.measureText(line).width,out); return out+lh; } line=s[i]; out+=lh; } else line=t; } if(line) ctx.fillText(line,x,out); return out+lh; }
+  function buildShareCard(){
+    if(!lastData) return;
+    var box=document.getElementById('shareOut');
+    if(box){ box.hidden=false; box.innerHTML='<p class="share-wait cjk">正在生成你的专属结果卡…</p>'; }
+    ensureFonts().then(function(){
+      var got={char:null,qr:null,n:0};
+      function ready(){ if(++got.n>=2) finishCard(got.char,got.qr,box); }
+      var cimg=new Image();
+      cimg.onload=function(){ got.char=cimg; ready(); };
+      cimg.onerror=function(){ ready(); };
+      var svg=CHAR[lastData.primary].replace('<svg ','<svg xmlns="http://www.w3.org/2000/svg" width="300" height="321" ');
+      try{ cimg.src='data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(svg))); }catch(e){ cimg.src='data:image/svg+xml,'+encodeURIComponent(svg); }
+      var url=location.href.split('#')[0];
+      var qurl='https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=0&qzone=1&format=png&data='+encodeURIComponent(url);
+      fetch(qurl).then(function(r){ if(!r.ok) throw 0; return r.blob(); }).then(function(b){ return new Promise(function(res,rej){ var fr=new FileReader(); fr.onload=function(){ res(fr.result); }; fr.onerror=rej; fr.readAsDataURL(b); }); }).then(function(d){ var q=new Image(); q.onload=function(){ got.qr=q; ready(); }; q.onerror=function(){ ready(); }; q.src=d; }).catch(function(){ ready(); });
+    });
+  }
+  function finishCard(cimg,qrimg,box){
+    var P=F[lastData.primary], col=SC[lastData.primary];
+    var cv=document.createElement('canvas'); cv.width=1080; cv.height=1600; var ctx=cv.getContext('2d');
+    ctx.fillStyle='#fff'; ctx.fillRect(0,0,1080,1600);
+    var bg=ctx.createLinearGradient(0,0,0,1600); bg.addColorStop(0,hexA(col,.05)); bg.addColorStop(1,hexA(col,.18)); ctx.fillStyle=bg; ctx.fillRect(0,0,1080,1600);
+    ctx.fillStyle=col; ctx.fillRect(0,0,1080,12);
+    ctx.strokeStyle=hexA(col,.35); ctx.lineWidth=2; ctx.strokeRect(30,30,1020,1540);
+    ctx.textAlign='left'; ctx.fillStyle=col; ctx.font='700 24px "Archivo"'; ctx.fillText('我的女性主义画像 · MY FEMINIST PORTRAIT',80,104);
+    ctx.strokeStyle=col; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(80,122); ctx.lineTo(152,122); ctx.stroke();
+    var hx=540, hy=302; var hg=ctx.createRadialGradient(hx,hy,10,hx,hy,210); hg.addColorStop(0,hexA(col,.22)); hg.addColorStop(1,hexA(col,0)); ctx.fillStyle=hg; ctx.beginPath(); ctx.arc(hx,hy,210,0,7); ctx.fill();
+    var cw=300, ch=321, cX=hx-cw/2, cY=148;
+    ctx.save(); rr(ctx,cX,cY,cw,ch,28); ctx.clip(); if(cimg){ ctx.drawImage(cimg,cX,cY,cw,ch); } else { var fg=ctx.createLinearGradient(cX,cY,cX,cY+ch); fg.addColorStop(0,hexA(col,.28)); fg.addColorStop(1,hexA(col,.12)); ctx.fillStyle=fg; ctx.fill(); ctx.fillStyle=col; ctx.font='900 96px "Fraunces","Noto Serif SC"'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(P.s.charAt(0),hx,cY+ch/2); ctx.textBaseline='alphabetic'; } ctx.restore();
+    ctx.lineWidth=9; ctx.strokeStyle='#fff'; rr(ctx,cX,cY,cw,ch,28); ctx.stroke();
+    ctx.textAlign='center'; ctx.fillStyle='#1E1C19'; ctx.font='900 62px "Fraunces","Noto Serif SC"'; ctx.fillText(P.card,540,548);
+    ctx.fillStyle='#8C887E'; ctx.font='italic 30px "Fraunces"'; ctx.fillText(P.en,540,588);
+    ctx.font='700 22px "Archivo"'; var pw=ctx.measureText('最接近的流派').width+46; ctx.fillStyle=col; rr(ctx,540-pw/2,608,pw,40,20); ctx.fill(); ctx.fillStyle='#fff'; ctx.textBaseline='middle'; ctx.fillText('最接近的流派',540,629); ctx.textBaseline='alphabetic';
+    ctx.textAlign='left'; ctx.fillStyle='#56514A'; ctx.font='400 30px "Noto Sans SC"'; var y=cwrap(ctx,strip(P.lead),80,706,920,46,3);
+    y+=14; ctx.strokeStyle='#E8E4DC'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(80,y); ctx.lineTo(1000,y); ctx.stroke(); y+=40;
+    ctx.fillStyle='#8C887E'; ctx.font='700 22px "Archivo"'; ctx.fillText('契合程度 · DISTRIBUTION',80,y); y+=34;
+    var rows=lastData.ranked.slice(0,5), mx=lastData.max||1, i;
+    for(i=0;i<rows.length;i++){ var r=rows[i], p=Math.round(r.v/mx*100), c=SC[r.k];
+      ctx.fillStyle=(i===0?'#1E1C19':'#56514A'); ctx.font=(i===0?'700':'500')+' 26px "Noto Sans SC"'; ctx.textAlign='left'; ctx.fillText(F[r.k].s,80,y+22);
+      ctx.fillStyle='#ECEAE2'; rr(ctx,330,y+6,560,22,11); ctx.fill();
+      ctx.fillStyle=c; rr(ctx,330,y+6,Math.max(22,560*p/100),22,11); ctx.fill();
+      ctx.fillStyle=c; ctx.font='700 24px "Archivo"'; ctx.textAlign='right'; ctx.fillText(p+'%',1000,y+25); y+=50;
+    }
+    y+=20; ctx.textAlign='center'; ctx.fillStyle='#1E1C19'; ctx.font='italic 30px "Fraunces","Noto Serif SC"'; y=cwrap(ctx,P.q,540,y,900,42,2);
+    ctx.fillStyle='#8C887E'; ctx.font='600 20px "Archivo"'; ctx.fillText('—— '+P.qa,540,y+4);
+    var qy=1356; ctx.strokeStyle=hexA(col,.22); ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(80,qy-32); ctx.lineTo(1000,qy-32); ctx.stroke();
+    var qs=132, qX=82;
+    ctx.fillStyle='#fff'; rr(ctx,qX,qy,qs,qs,16); ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle=hexA(col,.4); rr(ctx,qX,qy,qs,qs,16); ctx.stroke();
+    if(qrimg){ ctx.drawImage(qrimg,qX+12,qy+12,qs-24,qs-24); }
+    else { ctx.fillStyle=col; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.font='900 56px "Fraunces"'; ctx.fillText('↗',qX+qs/2,qy+qs/2); ctx.textBaseline='alphabetic'; }
+    ctx.textAlign='left';
+    var tX=qX+qs+38;
+    ctx.fillStyle=darken(col,.55); ctx.font='900 34px "Fraunces","Noto Serif SC"'; ctx.fillText('进入你的女性主义坐标',tX,qy+40);
+    ctx.fillStyle='#56514A'; ctx.font='500 22px "Noto Sans SC"'; ctx.fillText('从自由、权力、差异与结构中，看见你的思想位置',tX,qy+78);
+    ctx.fillStyle=hexA(col,.95); ctx.font='700 21px "Archivo","Noto Sans SC"'; ctx.fillText(qrimg?'扫码生成你的 Feminist Portrait':'打开链接，生成你的 Feminist Portrait',tX,qy+112);
+    var durl; try{ durl=cv.toDataURL('image/png'); }catch(e){ durl=null; }
+    if(box){
+      if(durl){ box.innerHTML='<img class="share-card-img" alt="我的女性主义结果卡" src="'+durl+'"><p class="share-tip cjk">手机上<b>长按图片</b>即可保存/分享；电脑端点下方按钮下载。</p><div class="q-actions" style="justify-content:center"><a class="q-btn" download="我的女性主义画像.png" href="'+durl+'">↓ 下载结果卡</a></div>'; }
+      else { box.innerHTML='<p class="share-tip cjk">生成失败，请重试。</p>'; }
+    }
+  }
+
+  /* ============================ 事件 ============================ */
+  app.addEventListener('click',function(e){
+    var el=e.target.closest('[data-i],[data-act]'); if(!el) return;
+    if(el.hasAttribute('data-i')){
+      if(el.classList.contains('sel')) return;
+      Array.prototype.forEach.call(el.parentNode.querySelectorAll('.q-opt'),function(o){ o.style.pointerEvents='none'; });
+      el.classList.add('sel');
+      var ix=parseInt(el.getAttribute('data-i'),10);
+      setTimeout(function(){ choose(ix); },360);
+      return;
+    }
+    var act=el.getAttribute('data-act');
+    if(act==='start'){ idx=0; answers=[]; renderQ(); }
+    else if(act==='skip') skip();
+    else if(act==='back') back();
+    else if(act==='restart'){ idx=0; answers=[]; resetScores(); renderIntro(); }
+    else if(act==='copy') copyResult();
+    else if(act==='card') buildShareCard();
+  });
+
+  resetScores();
+  renderIntro();
+})();
+</script>
+</body>
+</html>
